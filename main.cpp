@@ -1,6 +1,6 @@
 #include <iostream>
 
-#include "functions.h"
+#include "functions/functions.h"
 #define OFF 0
 
 using namespace std;

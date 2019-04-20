@@ -29,7 +29,7 @@ const vector<string> explode(const string& testString, const char& explodeChar) 
 void populate(vector<Vagas*> &vagas, vector<Desempregado*> &desempregados) {
 
   // LE E POPULA DESEMPREGADOS
-  ifstream inputDesempregado("entradaDes.txt");
+  ifstream inputDesempregado("entradas/entradaDes.txt");
   int auxCountDes = 0;
   int qtdParamsDes = 4;
   int skillsLocationDes = 3;
@@ -63,7 +63,7 @@ void populate(vector<Vagas*> &vagas, vector<Desempregado*> &desempregados) {
   // END DESEMPREGADOS
   
   // LE E POPULA VAGAS
-  ifstream inputVagas("entradaVagas.txt");
+  ifstream inputVagas("entradas/entradaVagas.txt");
   int auxCountVagas = 0;
   int qtdParamsVagas = 10;
   int skillsLocationVagas = 2;
