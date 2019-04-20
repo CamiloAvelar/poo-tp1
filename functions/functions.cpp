@@ -30,9 +30,9 @@ void populate(vector<Vagas*> &vagas, vector<Desempregado*> &desempregados) {
 
   // LE E POPULA DESEMPREGADOS
   ifstream inputDesempregado("entradas/entradaDes.txt");
-  int auxCountDes = 0;
-  int qtdParamsDes = 4;
-  int skillsLocationDes = 3;
+  uint auxCountDes = 0;
+  uint qtdParamsDes = 4;
+  uint skillsLocationDes = 3;
   vector<string> paramsDes (qtdParamsDes);
   vector<string> skillsDes;
   int lines = 0;
@@ -47,7 +47,7 @@ void populate(vector<Vagas*> &vagas, vector<Desempregado*> &desempregados) {
       }
 
       if ( auxCountDes == qtdParamsDes - 1 ) {
-        for ( int i = 0; i < paramsDes.size(); i++ ) {
+        for ( uint i = 0; i < paramsDes.size(); i++ ) {
           if( i == qtdParamsDes - 1 ) {
             desempregados[lines] = new Desempregado(paramsDes[0], stoi(paramsDes[1]), skillsDes, stoi(paramsDes[3])); 
             lines++;
@@ -64,9 +64,9 @@ void populate(vector<Vagas*> &vagas, vector<Desempregado*> &desempregados) {
   
   // LE E POPULA VAGAS
   ifstream inputVagas("entradas/entradaVagas.txt");
-  int auxCountVagas = 0;
-  int qtdParamsVagas = 10;
-  int skillsLocationVagas = 2;
+  uint auxCountVagas = 0;
+  uint qtdParamsVagas = 10;
+  uint skillsLocationVagas = 2;
   vector<string> paramsVagas (qtdParamsVagas);
   vector<string> skillsVagas;
 
@@ -80,7 +80,7 @@ void populate(vector<Vagas*> &vagas, vector<Desempregado*> &desempregados) {
       }
 
       if ( auxCountVagas == qtdParamsVagas - 1 ) {
-        for ( int i = 0; i < paramsVagas.size(); i++ ) {
+        for ( uint i = 0; i < paramsVagas.size(); i++ ) {
           if( i == qtdParamsVagas - 1 ) {
             vagas[stoi(paramsVagas[0]) - 1] = new Vagas(stoi(paramsVagas[0]), skillsVagas, stof(paramsVagas[2]),stof(paramsVagas[3]), paramsVagas[4], stoi(paramsVagas[5]), paramsVagas[6], paramsVagas[7], stoi(paramsVagas[8]), paramsVagas[9]);
 

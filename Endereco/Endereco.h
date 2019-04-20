@@ -6,8 +6,10 @@
 using namespace std;
 
 class Endereco {
-  string rua, bairro, cidade;
+  string rua;
+  string bairro;
   int numero;
+  string cidade;
 public:
   Endereco(string, string, int, string);
   ~Endereco();
