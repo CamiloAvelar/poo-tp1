@@ -2,3 +2,9 @@ main
 main.txt
 genericTest.txt
 .vscode
+
+*.cmake
+CMakeCache.txt
+CMakeFiles
+
+Makefile
