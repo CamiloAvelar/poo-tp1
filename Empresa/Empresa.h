@@ -1,7 +1,7 @@
 #ifndef EMPRESA_H
 #define EMPRESA_H
 
-#include "Endereco.h"
+#include "../Endereco/Endereco.h"
 
 class Empresa {
   Endereco endereco;

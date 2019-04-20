@@ -7,8 +7,8 @@
 #include <fstream>
 #include <iostream>
 
-#include "Desempregado.h"
-#include "Vagas.h"
+#include "Pessoa/Desempregado/Desempregado.h"
+#include "Vagas/Vagas.h"
 
 using namespace std;
 

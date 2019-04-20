@@ -3,7 +3,7 @@
 
 #include <vector>
 #include <string>
-#include "Pessoa.h"
+#include "../Pessoa.h"
 
 class Desempregado
   :public Pessoa {
