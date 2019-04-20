@@ -15,8 +15,7 @@ include_directories(
   Vagas
  )
 
-add_executable(
-  main
+set( MY_CPP_FILES 
   Empresa/Empresa.cpp
   Endereco/Endereco.cpp
   functions/functions.cpp
@@ -25,3 +24,5 @@ add_executable(
   Vagas/Vagas.cpp
   main.cpp
 )
+
+add_executable( main ${MY_CPP_FILES})
