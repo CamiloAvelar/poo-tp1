@@ -18,7 +18,6 @@ include_directories(
 set( MY_CPP_FILES 
   Empresa/Empresa.cpp
   Endereco/Endereco.cpp
-  functions/functions.cpp
   Pessoa/Pessoa.cpp
   Pessoa/Desempregado/Desempregado.cpp
   Vagas/Vagas.cpp
