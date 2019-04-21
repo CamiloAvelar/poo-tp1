@@ -1,7 +1,7 @@
 #include <iostream>
 
-#include "Util/Util.h"
-#include "Operations/Operations.h"
+#include "../include/Util.h"
+#include "../include/Operations.h"
 #define OFF 0
 
 using namespace std;

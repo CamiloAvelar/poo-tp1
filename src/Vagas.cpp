@@ -1,4 +1,4 @@
-#include "Vagas.h"
+#include "../include/Vagas.h"
 
 Vagas::Vagas(int id, vector<string> skill, float horas, float remuneracao, string nome, int funcionarios, string rua, string bairro, int numero, string cidade) : empresa(rua, bairro, numero, cidade, nome, funcionarios), id(id), skill(skill), horas(horas), remuneracao(remuneracao) {};
 

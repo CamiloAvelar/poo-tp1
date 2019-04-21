@@ -1,4 +1,4 @@
-#include "Endereco.h"
+#include "../include/Endereco.h"
 
 Endereco::Endereco(string rua, string bairro, int numero, string cidade) : rua(rua), bairro(bairro), numero(numero), cidade(cidade) {};
 

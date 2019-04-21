@@ -1,9 +1,9 @@
 #ifndef OPERATIONS_H
 #define OPERATIONS_H
 
-#include "../Vagas/Vagas.h"
-#include "../Pessoa/Desempregado/Desempregado.h"
-#include "../Populate/Populate.h"
+#include "Vagas.h"
+#include "Desempregado.h"
+#include "Populate.h"
 #include <iomanip>
 #include <algorithm>
 

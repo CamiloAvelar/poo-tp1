@@ -1,7 +1,7 @@
 #ifndef VAGAS_H
 #define VAGAS_H
 
-#include "../Empresa/Empresa.h"
+#include "Empresa.h"
 #include <vector>
 
 class Vagas {

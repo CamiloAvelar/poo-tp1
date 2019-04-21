@@ -1,11 +1,11 @@
 #ifndef POPULATE_H
 #define POPULATE_H
 
-#include "../Vagas/Vagas.h"
-#include "../Pessoa/Desempregado/Desempregado.h"
-#include "../Util/Util.h"
+#include "Vagas.h"
+#include "Desempregado.h"
+#include "Util.h"
 #include <fstream>
-
+#include <cstring>
 
 class Populate {
   vector<Vagas*> vagas;
@@ -14,7 +14,7 @@ public:
   Populate();
   vector<Vagas*> getVagas();
   vector<Desempregado*> getDesempregados();
-  void populate(string, uint, uint, string);
+  void populate(const string &, const uint &, const uint &, const string &);
   void populateVagas();
   void populateDesempregados();
   void addVaga(Vagas* &);

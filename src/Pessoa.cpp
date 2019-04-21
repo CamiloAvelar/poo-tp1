@@ -1,4 +1,4 @@
-#include "Pessoa.h"
+#include "../include/Pessoa.h"
 
 Pessoa::Pessoa(string rua, string bairro, int numero, string cidade, string nome, int idade) : endereco(rua, bairro, numero, cidade), nome(nome), idade(idade) {}
 

@@ -1,7 +1,7 @@
 #ifndef PESSOA_H
 #define PESSOA_H
 
-#include "../Endereco/Endereco.h"
+#include "Endereco.h"
 #include <string>
 
 class Pessoa {

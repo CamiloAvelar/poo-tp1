@@ -1,0 +1,20 @@
+{
+  "tasks": [
+    {
+      "type": "shell",
+      "label": "g++ build active file",
+      "command": "/usr/bin/g++",
+      "args": [
+        "-g",
+        "${workspaceFolder}/src/*.cpp",
+        "${workspaceFolder}/lib/*.cpp",
+        "-o",
+        "${workspaceFolder}/bin/main"
+      ],
+      "options": {
+        "cwd": "/usr/bin"
+      }
+    }
+  ],
+  "version": "2.0.0"
+}

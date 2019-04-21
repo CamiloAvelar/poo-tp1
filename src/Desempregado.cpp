@@ -1,4 +1,4 @@
-#include "Desempregado.h"
+#include "../include/Desempregado.h"
 
 Desempregado::Desempregado(string nome, int idade, vector<string> skill, int tempo, string rua, string bairro, int numero, string cidade): Pessoa(rua, bairro, numero, cidade, nome, idade) {
   setTempo(tempo);

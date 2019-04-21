@@ -123,275 +123,248 @@ main/fast:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
 .PHONY : main/fast
 
-Empresa/Empresa.o: Empresa/Empresa.cpp.o
+src/Desempregado.o: src/Desempregado.cpp.o
 
-.PHONY : Empresa/Empresa.o
-
-# target to build an object file
-Empresa/Empresa.cpp.o:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Empresa/Empresa.cpp.o
-.PHONY : Empresa/Empresa.cpp.o
-
-Empresa/Empresa.i: Empresa/Empresa.cpp.i
-
-.PHONY : Empresa/Empresa.i
-
-# target to preprocess a source file
-Empresa/Empresa.cpp.i:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Empresa/Empresa.cpp.i
-.PHONY : Empresa/Empresa.cpp.i
-
-Empresa/Empresa.s: Empresa/Empresa.cpp.s
-
-.PHONY : Empresa/Empresa.s
-
-# target to generate assembly for a file
-Empresa/Empresa.cpp.s:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Empresa/Empresa.cpp.s
-.PHONY : Empresa/Empresa.cpp.s
-
-Endereco/Endereco.o: Endereco/Endereco.cpp.o
-
-.PHONY : Endereco/Endereco.o
+.PHONY : src/Desempregado.o
 
 # target to build an object file
-Endereco/Endereco.cpp.o:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Endereco/Endereco.cpp.o
-.PHONY : Endereco/Endereco.cpp.o
+src/Desempregado.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Desempregado.cpp.o
+.PHONY : src/Desempregado.cpp.o
 
-Endereco/Endereco.i: Endereco/Endereco.cpp.i
+src/Desempregado.i: src/Desempregado.cpp.i
 
-.PHONY : Endereco/Endereco.i
+.PHONY : src/Desempregado.i
 
 # target to preprocess a source file
-Endereco/Endereco.cpp.i:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Endereco/Endereco.cpp.i
-.PHONY : Endereco/Endereco.cpp.i
+src/Desempregado.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Desempregado.cpp.i
+.PHONY : src/Desempregado.cpp.i
 
-Endereco/Endereco.s: Endereco/Endereco.cpp.s
+src/Desempregado.s: src/Desempregado.cpp.s
 
-.PHONY : Endereco/Endereco.s
+.PHONY : src/Desempregado.s
 
 # target to generate assembly for a file
-Endereco/Endereco.cpp.s:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Endereco/Endereco.cpp.s
-.PHONY : Endereco/Endereco.cpp.s
+src/Desempregado.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Desempregado.cpp.s
+.PHONY : src/Desempregado.cpp.s
 
-Operations/Operations.o: Operations/Operations.cpp.o
+src/Empresa.o: src/Empresa.cpp.o
 
-.PHONY : Operations/Operations.o
+.PHONY : src/Empresa.o
 
 # target to build an object file
-Operations/Operations.cpp.o:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Operations/Operations.cpp.o
-.PHONY : Operations/Operations.cpp.o
+src/Empresa.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Empresa.cpp.o
+.PHONY : src/Empresa.cpp.o
 
-Operations/Operations.i: Operations/Operations.cpp.i
+src/Empresa.i: src/Empresa.cpp.i
 
-.PHONY : Operations/Operations.i
+.PHONY : src/Empresa.i
 
 # target to preprocess a source file
-Operations/Operations.cpp.i:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Operations/Operations.cpp.i
-.PHONY : Operations/Operations.cpp.i
+src/Empresa.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Empresa.cpp.i
+.PHONY : src/Empresa.cpp.i
 
-Operations/Operations.s: Operations/Operations.cpp.s
+src/Empresa.s: src/Empresa.cpp.s
 
-.PHONY : Operations/Operations.s
+.PHONY : src/Empresa.s
 
 # target to generate assembly for a file
-Operations/Operations.cpp.s:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Operations/Operations.cpp.s
-.PHONY : Operations/Operations.cpp.s
+src/Empresa.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Empresa.cpp.s
+.PHONY : src/Empresa.cpp.s
 
-Pessoa/Desempregado/Desempregado.o: Pessoa/Desempregado/Desempregado.cpp.o
+src/Endereco.o: src/Endereco.cpp.o
 
-.PHONY : Pessoa/Desempregado/Desempregado.o
+.PHONY : src/Endereco.o
 
 # target to build an object file
-Pessoa/Desempregado/Desempregado.cpp.o:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Pessoa/Desempregado/Desempregado.cpp.o
-.PHONY : Pessoa/Desempregado/Desempregado.cpp.o
+src/Endereco.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Endereco.cpp.o
+.PHONY : src/Endereco.cpp.o
 
-Pessoa/Desempregado/Desempregado.i: Pessoa/Desempregado/Desempregado.cpp.i
+src/Endereco.i: src/Endereco.cpp.i
 
-.PHONY : Pessoa/Desempregado/Desempregado.i
+.PHONY : src/Endereco.i
 
 # target to preprocess a source file
-Pessoa/Desempregado/Desempregado.cpp.i:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Pessoa/Desempregado/Desempregado.cpp.i
-.PHONY : Pessoa/Desempregado/Desempregado.cpp.i
+src/Endereco.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Endereco.cpp.i
+.PHONY : src/Endereco.cpp.i
 
-Pessoa/Desempregado/Desempregado.s: Pessoa/Desempregado/Desempregado.cpp.s
+src/Endereco.s: src/Endereco.cpp.s
 
-.PHONY : Pessoa/Desempregado/Desempregado.s
+.PHONY : src/Endereco.s
 
 # target to generate assembly for a file
-Pessoa/Desempregado/Desempregado.cpp.s:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Pessoa/Desempregado/Desempregado.cpp.s
-.PHONY : Pessoa/Desempregado/Desempregado.cpp.s
+src/Endereco.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Endereco.cpp.s
+.PHONY : src/Endereco.cpp.s
 
-Pessoa/Pessoa.o: Pessoa/Pessoa.cpp.o
+src/Operations.o: src/Operations.cpp.o
 
-.PHONY : Pessoa/Pessoa.o
+.PHONY : src/Operations.o
 
 # target to build an object file
-Pessoa/Pessoa.cpp.o:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Pessoa/Pessoa.cpp.o
-.PHONY : Pessoa/Pessoa.cpp.o
+src/Operations.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Operations.cpp.o
+.PHONY : src/Operations.cpp.o
 
-Pessoa/Pessoa.i: Pessoa/Pessoa.cpp.i
+src/Operations.i: src/Operations.cpp.i
 
-.PHONY : Pessoa/Pessoa.i
+.PHONY : src/Operations.i
 
 # target to preprocess a source file
-Pessoa/Pessoa.cpp.i:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Pessoa/Pessoa.cpp.i
-.PHONY : Pessoa/Pessoa.cpp.i
+src/Operations.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Operations.cpp.i
+.PHONY : src/Operations.cpp.i
 
-Pessoa/Pessoa.s: Pessoa/Pessoa.cpp.s
+src/Operations.s: src/Operations.cpp.s
 
-.PHONY : Pessoa/Pessoa.s
+.PHONY : src/Operations.s
 
 # target to generate assembly for a file
-Pessoa/Pessoa.cpp.s:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Pessoa/Pessoa.cpp.s
-.PHONY : Pessoa/Pessoa.cpp.s
+src/Operations.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Operations.cpp.s
+.PHONY : src/Operations.cpp.s
 
-Populate/Populate.o: Populate/Populate.cpp.o
+src/Pessoa.o: src/Pessoa.cpp.o
 
-.PHONY : Populate/Populate.o
+.PHONY : src/Pessoa.o
 
 # target to build an object file
-Populate/Populate.cpp.o:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Populate/Populate.cpp.o
-.PHONY : Populate/Populate.cpp.o
+src/Pessoa.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Pessoa.cpp.o
+.PHONY : src/Pessoa.cpp.o
 
-Populate/Populate.i: Populate/Populate.cpp.i
+src/Pessoa.i: src/Pessoa.cpp.i
 
-.PHONY : Populate/Populate.i
+.PHONY : src/Pessoa.i
 
 # target to preprocess a source file
-Populate/Populate.cpp.i:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Populate/Populate.cpp.i
-.PHONY : Populate/Populate.cpp.i
+src/Pessoa.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Pessoa.cpp.i
+.PHONY : src/Pessoa.cpp.i
 
-Populate/Populate.s: Populate/Populate.cpp.s
+src/Pessoa.s: src/Pessoa.cpp.s
 
-.PHONY : Populate/Populate.s
+.PHONY : src/Pessoa.s
 
 # target to generate assembly for a file
-Populate/Populate.cpp.s:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Populate/Populate.cpp.s
-.PHONY : Populate/Populate.cpp.s
+src/Pessoa.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Pessoa.cpp.s
+.PHONY : src/Pessoa.cpp.s
 
-Util/Util.o: Util/Util.cpp.o
+src/Populate.o: src/Populate.cpp.o
 
-.PHONY : Util/Util.o
+.PHONY : src/Populate.o
 
 # target to build an object file
-Util/Util.cpp.o:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Util/Util.cpp.o
-.PHONY : Util/Util.cpp.o
+src/Populate.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Populate.cpp.o
+.PHONY : src/Populate.cpp.o
 
-Util/Util.i: Util/Util.cpp.i
+src/Populate.i: src/Populate.cpp.i
 
-.PHONY : Util/Util.i
+.PHONY : src/Populate.i
 
 # target to preprocess a source file
-Util/Util.cpp.i:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Util/Util.cpp.i
-.PHONY : Util/Util.cpp.i
+src/Populate.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Populate.cpp.i
+.PHONY : src/Populate.cpp.i
 
-Util/Util.s: Util/Util.cpp.s
+src/Populate.s: src/Populate.cpp.s
 
-.PHONY : Util/Util.s
+.PHONY : src/Populate.s
 
 # target to generate assembly for a file
-Util/Util.cpp.s:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Util/Util.cpp.s
-.PHONY : Util/Util.cpp.s
+src/Populate.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Populate.cpp.s
+.PHONY : src/Populate.cpp.s
 
-Vagas/Vagas.o: Vagas/Vagas.cpp.o
+src/Util.o: src/Util.cpp.o
 
-.PHONY : Vagas/Vagas.o
+.PHONY : src/Util.o
 
 # target to build an object file
-Vagas/Vagas.cpp.o:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Vagas/Vagas.cpp.o
-.PHONY : Vagas/Vagas.cpp.o
+src/Util.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Util.cpp.o
+.PHONY : src/Util.cpp.o
 
-Vagas/Vagas.i: Vagas/Vagas.cpp.i
+src/Util.i: src/Util.cpp.i
 
-.PHONY : Vagas/Vagas.i
+.PHONY : src/Util.i
 
 # target to preprocess a source file
-Vagas/Vagas.cpp.i:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Vagas/Vagas.cpp.i
-.PHONY : Vagas/Vagas.cpp.i
+src/Util.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Util.cpp.i
+.PHONY : src/Util.cpp.i
 
-Vagas/Vagas.s: Vagas/Vagas.cpp.s
+src/Util.s: src/Util.cpp.s
 
-.PHONY : Vagas/Vagas.s
+.PHONY : src/Util.s
 
 # target to generate assembly for a file
-Vagas/Vagas.cpp.s:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Vagas/Vagas.cpp.s
-.PHONY : Vagas/Vagas.cpp.s
+src/Util.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Util.cpp.s
+.PHONY : src/Util.cpp.s
 
-functions/functions.o: functions/functions.cpp.o
+src/Vagas.o: src/Vagas.cpp.o
 
-.PHONY : functions/functions.o
+.PHONY : src/Vagas.o
 
 # target to build an object file
-functions/functions.cpp.o:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/functions/functions.cpp.o
-.PHONY : functions/functions.cpp.o
+src/Vagas.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Vagas.cpp.o
+.PHONY : src/Vagas.cpp.o
 
-functions/functions.i: functions/functions.cpp.i
+src/Vagas.i: src/Vagas.cpp.i
 
-.PHONY : functions/functions.i
+.PHONY : src/Vagas.i
 
 # target to preprocess a source file
-functions/functions.cpp.i:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/functions/functions.cpp.i
-.PHONY : functions/functions.cpp.i
+src/Vagas.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Vagas.cpp.i
+.PHONY : src/Vagas.cpp.i
 
-functions/functions.s: functions/functions.cpp.s
+src/Vagas.s: src/Vagas.cpp.s
 
-.PHONY : functions/functions.s
+.PHONY : src/Vagas.s
 
 # target to generate assembly for a file
-functions/functions.cpp.s:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/functions/functions.cpp.s
-.PHONY : functions/functions.cpp.s
+src/Vagas.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Vagas.cpp.s
+.PHONY : src/Vagas.cpp.s
 
-main.o: main.cpp.o
+src/main.o: src/main.cpp.o
 
-.PHONY : main.o
+.PHONY : src/main.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.o
-.PHONY : main.cpp.o
+src/main.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/main.cpp.o
+.PHONY : src/main.cpp.o
 
-main.i: main.cpp.i
+src/main.i: src/main.cpp.i
 
-.PHONY : main.i
+.PHONY : src/main.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.i
-.PHONY : main.cpp.i
+src/main.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/main.cpp.i
+.PHONY : src/main.cpp.i
 
-main.s: main.cpp.s
+src/main.s: src/main.cpp.s
 
-.PHONY : main.s
+.PHONY : src/main.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.s
-.PHONY : main.cpp.s
+src/main.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/main.cpp.s
+.PHONY : src/main.cpp.s
 
 # Help Target
 help:
@@ -402,36 +375,33 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... main"
 	@echo "... edit_cache"
-	@echo "... Empresa/Empresa.o"
-	@echo "... Empresa/Empresa.i"
-	@echo "... Empresa/Empresa.s"
-	@echo "... Endereco/Endereco.o"
-	@echo "... Endereco/Endereco.i"
-	@echo "... Endereco/Endereco.s"
-	@echo "... Operations/Operations.o"
-	@echo "... Operations/Operations.i"
-	@echo "... Operations/Operations.s"
-	@echo "... Pessoa/Desempregado/Desempregado.o"
-	@echo "... Pessoa/Desempregado/Desempregado.i"
-	@echo "... Pessoa/Desempregado/Desempregado.s"
-	@echo "... Pessoa/Pessoa.o"
-	@echo "... Pessoa/Pessoa.i"
-	@echo "... Pessoa/Pessoa.s"
-	@echo "... Populate/Populate.o"
-	@echo "... Populate/Populate.i"
-	@echo "... Populate/Populate.s"
-	@echo "... Util/Util.o"
-	@echo "... Util/Util.i"
-	@echo "... Util/Util.s"
-	@echo "... Vagas/Vagas.o"
-	@echo "... Vagas/Vagas.i"
-	@echo "... Vagas/Vagas.s"
-	@echo "... functions/functions.o"
-	@echo "... functions/functions.i"
-	@echo "... functions/functions.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... src/Desempregado.o"
+	@echo "... src/Desempregado.i"
+	@echo "... src/Desempregado.s"
+	@echo "... src/Empresa.o"
+	@echo "... src/Empresa.i"
+	@echo "... src/Empresa.s"
+	@echo "... src/Endereco.o"
+	@echo "... src/Endereco.i"
+	@echo "... src/Endereco.s"
+	@echo "... src/Operations.o"
+	@echo "... src/Operations.i"
+	@echo "... src/Operations.s"
+	@echo "... src/Pessoa.o"
+	@echo "... src/Pessoa.i"
+	@echo "... src/Pessoa.s"
+	@echo "... src/Populate.o"
+	@echo "... src/Populate.i"
+	@echo "... src/Populate.s"
+	@echo "... src/Util.o"
+	@echo "... src/Util.i"
+	@echo "... src/Util.s"
+	@echo "... src/Vagas.o"
+	@echo "... src/Vagas.i"
+	@echo "... src/Vagas.s"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
 .PHONY : help
 
 

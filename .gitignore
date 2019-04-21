@@ -1,13 +1,9 @@
-main
-main.txt
-genericTest.txt
-
-functions
-.vscode
+.vscode/ipch
 
 *.cmake
 CMakeCache.txt
 CMakeFiles
 
+bin/*
 
 Makefile
