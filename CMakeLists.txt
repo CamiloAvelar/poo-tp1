@@ -22,6 +22,9 @@ set( MY_CPP_FILES
   Pessoa/Pessoa.cpp
   Pessoa/Desempregado/Desempregado.cpp
   Vagas/Vagas.cpp
+  Operations/Operations.cpp
+  Util/Util.cpp
+  Populate/Populate.cpp
   main.cpp
 )
 

@@ -177,6 +177,33 @@ Endereco/Endereco.cpp.s:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Endereco/Endereco.cpp.s
 .PHONY : Endereco/Endereco.cpp.s
 
+Operations/Operations.o: Operations/Operations.cpp.o
+
+.PHONY : Operations/Operations.o
+
+# target to build an object file
+Operations/Operations.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Operations/Operations.cpp.o
+.PHONY : Operations/Operations.cpp.o
+
+Operations/Operations.i: Operations/Operations.cpp.i
+
+.PHONY : Operations/Operations.i
+
+# target to preprocess a source file
+Operations/Operations.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Operations/Operations.cpp.i
+.PHONY : Operations/Operations.cpp.i
+
+Operations/Operations.s: Operations/Operations.cpp.s
+
+.PHONY : Operations/Operations.s
+
+# target to generate assembly for a file
+Operations/Operations.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Operations/Operations.cpp.s
+.PHONY : Operations/Operations.cpp.s
+
 Pessoa/Desempregado/Desempregado.o: Pessoa/Desempregado/Desempregado.cpp.o
 
 .PHONY : Pessoa/Desempregado/Desempregado.o
@@ -230,6 +257,60 @@ Pessoa/Pessoa.s: Pessoa/Pessoa.cpp.s
 Pessoa/Pessoa.cpp.s:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Pessoa/Pessoa.cpp.s
 .PHONY : Pessoa/Pessoa.cpp.s
+
+Populate/Populate.o: Populate/Populate.cpp.o
+
+.PHONY : Populate/Populate.o
+
+# target to build an object file
+Populate/Populate.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Populate/Populate.cpp.o
+.PHONY : Populate/Populate.cpp.o
+
+Populate/Populate.i: Populate/Populate.cpp.i
+
+.PHONY : Populate/Populate.i
+
+# target to preprocess a source file
+Populate/Populate.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Populate/Populate.cpp.i
+.PHONY : Populate/Populate.cpp.i
+
+Populate/Populate.s: Populate/Populate.cpp.s
+
+.PHONY : Populate/Populate.s
+
+# target to generate assembly for a file
+Populate/Populate.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Populate/Populate.cpp.s
+.PHONY : Populate/Populate.cpp.s
+
+Util/Util.o: Util/Util.cpp.o
+
+.PHONY : Util/Util.o
+
+# target to build an object file
+Util/Util.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Util/Util.cpp.o
+.PHONY : Util/Util.cpp.o
+
+Util/Util.i: Util/Util.cpp.i
+
+.PHONY : Util/Util.i
+
+# target to preprocess a source file
+Util/Util.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Util/Util.cpp.i
+.PHONY : Util/Util.cpp.i
+
+Util/Util.s: Util/Util.cpp.s
+
+.PHONY : Util/Util.s
+
+# target to generate assembly for a file
+Util/Util.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Util/Util.cpp.s
+.PHONY : Util/Util.cpp.s
 
 Vagas/Vagas.o: Vagas/Vagas.cpp.o
 
@@ -327,12 +408,21 @@ help:
 	@echo "... Endereco/Endereco.o"
 	@echo "... Endereco/Endereco.i"
 	@echo "... Endereco/Endereco.s"
+	@echo "... Operations/Operations.o"
+	@echo "... Operations/Operations.i"
+	@echo "... Operations/Operations.s"
 	@echo "... Pessoa/Desempregado/Desempregado.o"
 	@echo "... Pessoa/Desempregado/Desempregado.i"
 	@echo "... Pessoa/Desempregado/Desempregado.s"
 	@echo "... Pessoa/Pessoa.o"
 	@echo "... Pessoa/Pessoa.i"
 	@echo "... Pessoa/Pessoa.s"
+	@echo "... Populate/Populate.o"
+	@echo "... Populate/Populate.i"
+	@echo "... Populate/Populate.s"
+	@echo "... Util/Util.o"
+	@echo "... Util/Util.i"
+	@echo "... Util/Util.s"
 	@echo "... Vagas/Vagas.o"
 	@echo "... Vagas/Vagas.i"
 	@echo "... Vagas/Vagas.s"
