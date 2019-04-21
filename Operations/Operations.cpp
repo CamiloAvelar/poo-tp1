@@ -1,114 +1,8 @@
-#include "functions.h"
+#include "Operations.h"
 
-const string toLowerCase(const string& str) {
-  string newString;
-  newString.resize(str.size());
- 
-  transform(str.begin(), str.end(), newString.begin(), ::tolower);
+Operations::Operations() {};
 
-  return newString;
-}
-
-const vector<string> explode(const string& testString, const char& explodeChar) {
-    string buff{""};
-    vector<string> stringVector;
-
-    for (auto character : testString) {
-        if (character != explodeChar) {
-          buff+=character;
-        } else if (character == explodeChar && buff != "") {
-          stringVector.push_back(buff);
-          buff = "";
-        }
-    }
-    if(buff != "") stringVector.push_back(buff);
-
-    return stringVector;
-}
-
-void populate(vector<Vagas*> &vagas, vector<Desempregado*> &desempregados) {
-
-  // LE E POPULA DESEMPREGADOS
-  ifstream inputDesempregado("entradas/entradaDes.txt");
-  uint auxCountDes = 0;
-  uint qtdParamsDes = 4;
-  uint skillsLocationDes = 3;
-  vector<string> paramsDes (qtdParamsDes);
-  vector<string> skillsDes;
-  int lines = 0;
-
-  for( string line; getline(inputDesempregado, line); ) {
-
-    if( auxCountDes < qtdParamsDes) {
-      if (auxCountDes == skillsLocationDes - 1) {
-        skillsDes = explode(line, ' ');
-        sort(skillsDes.begin(), skillsDes.end());
-        string lastSkill;
-        int indexSkill = 0;
-        for(string skill : skillsDes) {
-          if(lastSkill == skill) {
-            skillsDes.erase(skillsDes.begin() + indexSkill);
-          }
-          lastSkill = skill;
-          indexSkill++;
-        }
-      } else {
-        paramsDes[auxCountDes] = line;
-      }
-
-      if ( auxCountDes == qtdParamsDes - 1 ) {
-        for ( uint i = 0; i < paramsDes.size(); i++ ) {
-          if( i == qtdParamsDes - 1 ) {
-            desempregados[lines] = new Desempregado(paramsDes[0], stoi(paramsDes[1]), skillsDes, stoi(paramsDes[3])); 
-            lines++;
-          }
-        }
-
-        auxCountDes = 0;
-      } else {
-        auxCountDes++;
-      }
-    }
-  }
-  // END DESEMPREGADOS
-  
-  // LE E POPULA VAGAS
-  ifstream inputVagas("entradas/entradaVagas.txt");
-  uint auxCountVagas = 0;
-  uint qtdParamsVagas = 10;
-  uint skillsLocationVagas = 2;
-  vector<string> paramsVagas (qtdParamsVagas);
-  vector<string> skillsVagas;
-
-  for( string line; getline(inputVagas, line); ) {
-
-    if( auxCountVagas < qtdParamsVagas) {
-      if (auxCountVagas == skillsLocationVagas - 1) {
-        skillsVagas = explode(line, ' ');
-      } else {
-        paramsVagas[auxCountVagas] = line;
-      }
-
-      if ( auxCountVagas == qtdParamsVagas - 1 ) {
-        for ( uint i = 0; i < paramsVagas.size(); i++ ) {
-          if( i == qtdParamsVagas - 1 ) {
-            vagas[stoi(paramsVagas[0]) - 1] = new Vagas(stoi(paramsVagas[0]), skillsVagas, stof(paramsVagas[2]),stof(paramsVagas[3]), paramsVagas[4], stoi(paramsVagas[5]), paramsVagas[6], paramsVagas[7], stoi(paramsVagas[8]), paramsVagas[9]);
-
-            desempregados[stoi(paramsVagas[0]) - 1]->setEndereco(paramsVagas[6], paramsVagas[7], stoi(paramsVagas[8]), paramsVagas[9]); // POPULA ALGUNS ENDERECOS EM DESEMPREGADOS
-          }
-        }
-
-        auxCountVagas = 0;
-      } else {
-        auxCountVagas++;
-      }
-    }
-  }
-  // END VAGAS
-}
-
-// OPERACAO 1
-vector<Vagas*> operation1 (const vector<Vagas*> &vagas, const vector<Desempregado*> &desempregados){
+const vector<Vagas*> Operations::operation1() {
   vector<Vagas*> result;
   string inNome;
 
@@ -117,10 +11,10 @@ vector<Vagas*> operation1 (const vector<Vagas*> &vagas, const vector<Desempregad
   cin.ignore();
   getline(cin, inNome);
   
-  for(Desempregado *desempregado : desempregados) {
-    if(toLowerCase(desempregado->getNome()) == toLowerCase(inNome)) {
-      for(Vagas *vaga : vagas) {
-        if(toLowerCase(vaga->getBairro()) == toLowerCase(desempregado->getBairro())) {
+  for(Desempregado *desempregado : populate.getDesempregados()) {
+    if(Util::toLowerCase(desempregado->getNome()) == Util::toLowerCase(inNome)) {
+      for(Vagas *vaga : populate.getVagas()) {
+        if(Util::toLowerCase(vaga->getBairro()) == Util::toLowerCase(desempregado->getBairro())) {
           result.push_back(vaga);
           // cout << vaga->getRemuneracao() << endl;
         }
@@ -135,16 +29,14 @@ vector<Vagas*> operation1 (const vector<Vagas*> &vagas, const vector<Desempregad
 
   cout << "--------------------------------------" << endl;
   for (Vagas* vaga : result) {
-    cout << vaga->getRemuneracao() << endl;
+    cout << vaga->getId() << endl;
   }
   cout << "--------------------------------------" << endl;
 
   return result;
-}
-// FIM OPERACAO 1
+};
 
-// OPERACAO 2
-vector<Vagas*> operation2 (const vector<Vagas*> &vagas, const vector<Desempregado*> &desempregados){
+const vector<Vagas*> Operations::operation2() {
   vector<Vagas*> result;
   string nomeDesempregado;
   cout << "Digite o nome do desempregado: ";
@@ -153,9 +45,9 @@ vector<Vagas*> operation2 (const vector<Vagas*> &vagas, const vector<Desempregad
   getline(cin, nomeDesempregado);
   bool breakLoop = 0;
 
-  for(Desempregado *desempregado : desempregados) {
-    if(toLowerCase(desempregado->getNome()) == toLowerCase(nomeDesempregado)) {
-      for(Vagas *vaga : vagas) {
+  for(Desempregado *desempregado : populate.getDesempregados()) {
+    if(Util::toLowerCase(desempregado->getNome()) == Util::toLowerCase(nomeDesempregado)) {
+      for(Vagas *vaga : populate.getVagas()) {
         for(string skillDesempregado : desempregado->getSkill()) {
           for(string skillVaga : vaga->getSkill()) {
             if(skillVaga == skillDesempregado){
@@ -180,16 +72,14 @@ vector<Vagas*> operation2 (const vector<Vagas*> &vagas, const vector<Desempregad
 
   cout << "--------------------------------------" << endl;
   for (Vagas* vaga : result) {
-    cout << vaga->getRemuneracao() << endl;
+    cout << vaga->getId() << endl;
   }
   cout << "--------------------------------------" << endl;
 
   return result;
 }
-// FIM OPERACAO 2
 
-// OPERACAO 3
-vector<Vagas*> operation3 (const vector<Vagas*> &vagas, const vector<Desempregado*> &desempregados){
+const vector<Vagas*> Operations::operation3 (){
   vector<Vagas*> result;
   string skillName;
   cout << "Digite a skill: ";
@@ -197,7 +87,7 @@ vector<Vagas*> operation3 (const vector<Vagas*> &vagas, const vector<Desempregad
   cin.ignore();
   getline(cin, skillName);
 
-  for(Vagas *vaga : vagas) {
+  for(Vagas *vaga : populate.getVagas()) {
     for(string skillVaga : vaga->getSkill()) {
       if(skillVaga == skillName) {
         result.push_back(vaga);
@@ -219,19 +109,17 @@ vector<Vagas*> operation3 (const vector<Vagas*> &vagas, const vector<Desempregad
 
   return result;
 }
-// FIM OPERACAO 3
 
-// OPERACAO 4
-vector<Desempregado*> operation4 (const vector<Vagas*> &vagas, const vector<Desempregado*> &desempregados){
+const vector<Desempregado*> Operations::operation4 (){
   vector<Desempregado*> result;
   int idVaga;
   cout << "Digite o id da vaga para pesquisa: ";
   cin >> idVaga;
   
-  for(Vagas *vaga : vagas) {
+  for(Vagas *vaga : populate.getVagas()) {
     if(vaga->getId() == idVaga){
-      for(Desempregado *desempregado : desempregados) {
-        if(toLowerCase(vaga->getBairro()) == toLowerCase(desempregado->getBairro())){
+      for(Desempregado *desempregado : populate.getDesempregados()) {
+        if(Util::toLowerCase(vaga->getBairro()) == Util::toLowerCase(desempregado->getBairro())){
           result.push_back(desempregado);
           // cout << desempregado->getIdade() << endl;
         }
@@ -246,24 +134,22 @@ vector<Desempregado*> operation4 (const vector<Vagas*> &vagas, const vector<Dese
 
   cout << "--------------------------------------" << endl;
   for (Desempregado* desempregado : result) {
-    cout << desempregado->getIdade() << endl;
+    cout << desempregado->getNome() << endl;
   }
   cout << "--------------------------------------" << endl;
 
   return result;
 }
-// FIM OPERACAO 4
 
-// OPERACAO 5
-vector<Desempregado*> operation5 (const vector<Vagas*> &vagas, const vector<Desempregado*> &desempregados){
+const vector<Desempregado*> Operations::operation5 (){
   vector<Desempregado*> result;
   int idVaga;
   cout << "Digite o id da vaga: ";
   cin >> idVaga;
 
-  for(Vagas *vaga : vagas) {
+  for(Vagas *vaga : populate.getVagas()) {
     if(vaga->getId() == idVaga){
-      for(Desempregado *desempregado : desempregados) {
+      for(Desempregado *desempregado : populate.getDesempregados()) {
         if (vaga->getSkill() == desempregado->getSkill()) {
           result.push_back(desempregado);
           // cout << desempregado->getTempo() << endl;
@@ -279,16 +165,14 @@ vector<Desempregado*> operation5 (const vector<Vagas*> &vagas, const vector<Dese
 
   cout << "--------------------------------------" << endl;
   for (Desempregado* desempregado : result) {
-    cout << desempregado->getTempo() << endl;
+    cout << desempregado->getNome() << endl;
   }
   cout << "--------------------------------------" << endl;
 
   return result;
 }
-// FIM OPERACAO 5
 
-// OPERACAO 6 (TODO: ORDENAR)
-void operation6 (const vector<Vagas*> &vagas, const vector<Desempregado*> &desempregados){
+const void Operations::operation6 (){
   vector<Vagas*> resultVagas;
   vector<Desempregado*> resultDesempregados;
   string skillName1;
@@ -297,7 +181,7 @@ void operation6 (const vector<Vagas*> &vagas, const vector<Desempregado*> &desem
   cin.ignore();
   getline(cin, skillName1);
 
-  for(Vagas *vaga : vagas) {
+  for(Vagas *vaga : populate.getVagas()) {
     for(string skillVaga : vaga->getSkill()) {
       if(skillVaga == skillName1) {
         resultVagas.push_back(vaga);
@@ -306,7 +190,7 @@ void operation6 (const vector<Vagas*> &vagas, const vector<Desempregado*> &desem
     }
   }
 
-  for(Desempregado *desempregado : desempregados) {
+  for(Desempregado *desempregado : populate.getDesempregados()) {
     for(string skillDesempregado : desempregado->getSkill()) {
       if(skillDesempregado == skillName1) {
         resultDesempregados.push_back(desempregado);
@@ -337,10 +221,8 @@ void operation6 (const vector<Vagas*> &vagas, const vector<Desempregado*> &desem
   }
   cout << "--------------------------------------" << endl;
 }
-// FIM OPERACAO 6
 
-// OPERACAO 7
-vector<Vagas*> operation7 (const vector<Vagas*> &vagas, const vector<Desempregado*> &desempregados){
+const vector<Vagas*> Operations::operation7 (){
   vector<Vagas*> result;
   string nomeEmpresa;
   cout << "Digite o nome da empresa: ";
@@ -348,8 +230,8 @@ vector<Vagas*> operation7 (const vector<Vagas*> &vagas, const vector<Desempregad
   cin.ignore();
   getline(cin, nomeEmpresa);
 
-  for(Vagas *vaga : vagas) {
-    if(toLowerCase(vaga->getNome()) == toLowerCase(nomeEmpresa)) {
+  for(Vagas *vaga : populate.getVagas()) {
+    if(Util::toLowerCase(vaga->getNome()) == Util::toLowerCase(nomeEmpresa)) {
       result.push_back(vaga);
       // cout << vaga->getId() << endl;
     }
@@ -368,12 +250,12 @@ vector<Vagas*> operation7 (const vector<Vagas*> &vagas, const vector<Desempregad
 
   return result;
 }
-// FIM OPERACAO 7
 
-// OPERACAO 8 (TODO: CORRIGIR: SE TIVER SKILL DUPLICADA NOS DESEMPREGADOS ELE COMPARA E VERIFICA TRUE, CORRECAO: VERIFICAR SE TEM SKILL DUPLICADA NOS DESEMPREGADOS ANTES)
-void operation8 (const vector<Vagas*> &vagas, vector<Desempregado*> desempregados){
+const void Operations::operation8 (){
+  vector<Desempregado*> desempregados = populate.getDesempregados();
   bool result;
-  for(Vagas *vaga : vagas) {
+  cout << setw(23) << "Nome do desempregado" << setw(5) << " Id da vaga" << endl;
+  for(Vagas *vaga : populate.getVagas()) {
     vector<string> skillVaga = vaga->getSkill();
     uint sizeVaga = vaga->getSkill().size();
     uint index = 0;
@@ -388,12 +270,10 @@ void operation8 (const vector<Vagas*> &vagas, vector<Desempregado*> desempregado
           result = binary_search(skillVaga.begin(), skillVaga.end(), skill);
           if(result) {
             auxSearch++;
-          } else {
-            break;
           }
         }
-        if(auxSearch == sizeDesempregado) {
-          cout << desempregado->getNome() << " - " << vaga->getId() << endl;
+        if(auxSearch == sizeVaga) {
+          cout << setw(23) << desempregado->getNome() << setw(5) << vaga->getId() << endl;
           desempregados.erase(desempregados.begin() + index);
           break;
         }
@@ -414,12 +294,9 @@ void operation8 (const vector<Vagas*> &vagas, vector<Desempregado*> desempregado
   //             // cout << desempregado->getTempo() << endl;
   //           }
   // cout << "--------------------------------------" << endl;
-
 }
 
-// FIM OPERACAO 8
-
-void addDesempregado(vector<Desempregado*> &desempregado) {
+const void Operations::createDesempregado() {
 
   string nome, skill, rua, bairro, cidade;
   int idade, tempo, numero;
@@ -446,17 +323,16 @@ void addDesempregado(vector<Desempregado*> &desempregado) {
   cin.ignore();
   getline(cin, cidade);
 
-  skills = explode(skill, ',');
+  skills = Util::explode(skill, ',');
 
   Desempregado *d = new Desempregado(nome, idade, skills, tempo, rua, bairro, numero, cidade);
 
-  cout << d->getNome() << " adicionado com sucesso!" << endl;
+  populate.addDesempregado(d);
 
-  desempregado.push_back(d);
+  cout << d->getNome() << " adicionado com sucesso!" << endl;
 }
 
-void addVaga(vector<Vagas*> &vagas) {
-
+const void Operations::createVaga() {
   int id, funcionarios, numero;
   string nome, rua, bairro, cidade;
   float horas, remuneracao;
@@ -488,11 +364,11 @@ void addVaga(vector<Vagas*> &vagas) {
   cin.ignore();
   getline(cin, cidade);
 
-  skills = explode(skill, ',');
+  skills = Util::explode(skill, ',');
 
   Vagas *v = new Vagas(id, skills, horas, remuneracao, nome, funcionarios, rua, bairro, numero, cidade);
 
-  cout << "Vaga " << v->getId() << " adicionada com sucesso!" << endl;
+  populate.addVaga(v);
 
-  vagas.push_back(v);
+  cout << "Vaga " << v->getId() << " adicionada com sucesso!" << endl;
 }

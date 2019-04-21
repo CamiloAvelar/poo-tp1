@@ -3,9 +3,11 @@
 
 #include <string>
 #include <vector>
+#include <list>
 #include <algorithm>
 #include <fstream>
 #include <iostream>
+#include <functional>
 
 #include "../Pessoa/Desempregado/Desempregado.h"
 #include "../Vagas/Vagas.h"
@@ -23,6 +25,7 @@ vector<Desempregado*> operation4(const vector<Vagas*> &, const vector<Desemprega
 vector<Desempregado*> operation5(const vector<Vagas*> &, const vector<Desempregado*> &);
 void operation6(const vector<Vagas*> &, const vector<Desempregado*> &);
 vector<Vagas*> operation7(const vector<Vagas*> &, const vector<Desempregado*> &);
+void operation8(const vector<Vagas*> &, vector<Desempregado*>);
 
 void addDesempregado(vector<Desempregado*> &);
 void addVaga(vector<Vagas*> &);
