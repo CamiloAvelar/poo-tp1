@@ -11,11 +11,11 @@ cmake . && make clean && make
 ### Caso não funcione:
 
 ```
-g++ -Wall *.cpp */*.cpp */*/*.cpp -o main
+g++ -Wall */*.cpp -o bin/main
 ```
 
 ### Executar o programa:
 
 ```
-./main
+bin/main
 ```
