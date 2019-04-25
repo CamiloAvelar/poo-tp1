@@ -1,5 +1,15 @@
 #include "../include/Populate.h"
 
+Populate* Populate::instance = 0;
+
+Populate* Populate::getInstance() {
+  if(instance == 0) {
+    instance = new Populate();
+  }
+
+  return instance;
+}
+
 Populate::Populate() {
   vector<Desempregado*> desempregados (1000);
   vector<Vagas*> vagas (500);
@@ -7,6 +17,10 @@ Populate::Populate() {
   populateDesempregados();
   populateVagas();
 };
+
+Populate::~Populate() {
+  delete instance;
+}
 
 void Populate::populate(const string &path, const uint &qtdParams, const uint &skillsLocation, const string &action) {
   ifstream input(path);

@@ -8,9 +8,12 @@
 #include <algorithm>
 
 class Operations {
-  Populate populate;
-public:
+  static Operations* instance;
+  Populate* populate = Populate::getInstance();
   Operations();
+public:
+  ~Operations();
+  static Operations* getInstance();
   const vector<Vagas*> operation1();
   const vector<Vagas*> operation3();
   const vector<Vagas*> operation2();
@@ -22,6 +25,9 @@ public:
   const void createDesempregado();
   const void operation8();
   const string toLowerCase(const string&);
+
+  Operations(const Operations&) = delete;
+  Operations& operator=(const Operations&) = delete;
 };
 
 #endif

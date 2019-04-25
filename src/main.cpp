@@ -8,7 +8,7 @@ using namespace std;
 
 int main() {
 
-  Operations *operations = new Operations();
+  Operations* operations = Operations::getInstance(); // Classe singleton
 
   int option = -1;
 
