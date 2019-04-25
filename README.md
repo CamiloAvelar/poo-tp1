@@ -3,12 +3,19 @@
 ## Descrição
 Trabalho prático para a disciplina POO, UFOP.
 
+[Relatório](relatorio/RELATORIO.md)
+
 ## Instalação
 
 ```
 cmake . && make clean && make
 ```
 ### Caso não funcione:
+Criar o diretório bin:
+```
+mkdir bin
+```
+Compilar o programa: (criará o executável no diretório /bin)
 
 ```
 g++ -Wall */*.cpp -o bin/main
