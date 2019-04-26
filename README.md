@@ -3,7 +3,7 @@
 ## Descrição
 Trabalho prático para a disciplina POO, UFOP.
 
-[Relatório](relatorio/RELATORIO.md)
+**[RELATÓRIO](relatorio/RELATORIO.md)**
 
 ## Instalação
 
