@@ -2,6 +2,27 @@
 
 ***Aluno***: *Camilo Esteves Mendes de Avelar*
 
+## Funcionamento do programa
+
+Ao executar o programa, a seguinte tela è exibida
+
+```
+Digite 0 para sair do programa.
+Digite 1 para dado o nome de um desempregado, exibir todas as vagas localizadas no mesmo bairro do desempregado
+Digite 2 para dado o nome de um desempregado, exibir todas as vagas em que o desempregado supri os requisitos de skill.
+Digite 3 para dado um skill, exibir todas as vagas que requer o dado skill
+Digite 4 para dado o id de uma vaga, exibir todos os desempregados que moram no mesmo bairro,
+Digite 5 para dado o id de uma vaga, exibir todos os desempregados que possuem os skills requeridos pela vaga.
+Digite 6 para dado um skill, exibir todas as vagas e os desempregados que possuem o dado skill.
+Digite 7 para dado o nome de uma empresa, exibir todas as vagas referentes a empresa
+Digite 8 para atribuir vagas à Desempregados
+Digite 9 para adicionar um Desempregado
+Digite 10 para adicionar uma Vaga
+--------------------------------------
+(digite o numero):
+```
+Ao digitar uma opção, é retornado o resultado e espera o usuário apertar Enter, ao apertar a tecla, retorna para a tela inicial até o usuário digitar 0.
+
 ## Diagrama UML
 
 ![UML-Classes-Image](images/UML-Classes.png)
