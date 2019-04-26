@@ -23,6 +23,15 @@ Digite 10 para adicionar uma Vaga
 ```
 Ao digitar uma opção, é retornado o resultado e espera o usuário apertar Enter, ao apertar a tecla, retorna para a tela inicial até o usuário digitar 0.
 
+## Estrutura do projeto
+
+```
+- src (arquivos .cpp)
+- includes (arquivos .h)
+- entradas (arquivos .txt para leitura)
+- bin (onde fica o executável compilado)
+```
+
 ## Diagrama UML
 
 ![UML-Classes-Image](images/UML-Classes.png)
