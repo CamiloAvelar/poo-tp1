@@ -24,7 +24,6 @@ public:
   const void createVaga();
   const void createDesempregado();
   const void operation8();
-  const string toLowerCase(const string&);
 
   Operations(const Operations&) = delete;
   Operations& operator=(const Operations&) = delete;
