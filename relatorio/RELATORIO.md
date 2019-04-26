@@ -4,7 +4,7 @@
 
 ## Funcionamento do programa
 
-Ao executar o programa, a seguinte tela è exibida
+Ao executar o programa, a seguinte tela é exibida
 
 ```
 Digite 0 para sair do programa.
@@ -94,7 +94,7 @@ void Populate::populate(const string &path, const uint &qtdParams, const uint &s
   
   ## Util
   
-    É a classe com funções staticas auxiliares que podem ser usadas em diversos lugares do programa, funções como:
+É a classe com funções staticas auxiliares que podem ser usadas em diversos lugares do programa, funções como:
     
 ```c++
 static const vector<string> explode(const string&, const char&);
