@@ -86,9 +86,9 @@ void Populate::populate(const string &path, const uint &qtdParams, const uint &s
 }
 ```
 
-  Ela lê linha por linha os arquivos entradaDes.txt e entradaVagas.txt, cada arquivo tem suas peculiaridades, número diferentes de linhas e cada linha é uma propriedade para criar o objeto das classes, ela recebe a quantidade de parâmetros para ler as linhas e em qual linha estão os skills. A cada iteração de linha um contador é aumentado, caso chegue no número final de parâmetros, ele cria o objeto e reseta o contador, garantindo que o parâmetro certo seja incluido no objeto.
+Ela lê linha por linha os arquivos entradaDes.txt e entradaVagas.txt, cada arquivo tem suas peculiaridades, número diferentes de linhas e cada linha é uma propriedade para criar o objeto das classes, ela recebe a quantidade de parâmetros para ler as linhas e em qual linha estão os skills. A cada iteração de linha um contador é aumentado, caso chegue no número final de parâmetros, ele cria o objeto e reseta o contador, garantindo que o parâmetro certo seja incluido no objeto.
   
-  Ela ainda é uma função *Singleton*, ou seja, só pode existir uma instancia, garantindo que exista apenas um vetor de vagas e desempregados na execução.
+  Ela ainda é uma classe *Singleton*, ou seja, só pode existir uma instancia, garantindo que exista apenas um vetor de vagas e desempregados na execução.
   
   Também é a única responsável por adicionar novas classes ao vetor, por segurança.
   
@@ -129,9 +129,9 @@ const void createDesempregado();
 const void operation8();
 ```
 
-É a classe responsáveis pelas operações pedidas no trabalho, é nela que está a implementação das operações.
+É a classe responsável pelas operações pedidas no trabalho, é nela que está a implementação das operações.
 
-Também é uma classe *Singleton*.
+Também é uma classe *Singleton*, garantindo apenas uma instância por execução.
 
 ### operation1
 ```c++
@@ -280,7 +280,17 @@ Percorre o vetor de vagas, caso o id da vaga for igual ao id digitado, percorre 
       }
     }
   }
+  
+for (Desempregado* desempregado : resultDesempregados) {
+ cout << desempregado->getNome() << endl;
+}
+for (Vagas* vaga : resultVagas) {
+ cout << vaga->getId() << endl;
+}
 ```
+Percorre o vetor de vagas, e o vetor de skill da vaga, caso o skill for igual ao skill digitado, adiciona o resultado ao vetor de resultados de vagas, faz o mesmo com os desempregados.
+
+Depois percorre os vetores de resultados imprimindo o nome dos desempregados e o id das vagas.
 
 ### operation7
 
@@ -288,15 +298,19 @@ Percorre o vetor de vagas, caso o id da vaga for igual ao id digitado, percorre 
 vector<Vagas*> result;
 string nomeEmpresa;
 
-
 getline(cin, nomeEmpresa);
 for(Vagas *vaga : populate->getVagas()) {
   if(Util::toLowerCase(vaga->getNome()) == Util::toLowerCase(nomeEmpresa)) {
     result.push_back(vaga);
-    // cout << vaga->getId() << endl;
   }
 }
+
+for (Vagas* vaga : result) {
+ cout << vaga->getId() << endl;
+}
 ```
+
+Percorre o vetor de vagas, caso o nome da empresa da vaga for igual ao nome digitado, adiciona a vaga ao vetor de resultados, que depois é percorrido exibindo o id das vagas.
 
 ### operation8
 
@@ -331,3 +345,5 @@ for(Vagas *vaga : populate->getVagas()) {
   } 
 }
 ```
+Percorre o vetor de vagas, pegando os skills da vaga, depois percorre o vetor de desempregados, recuperando os skills do desempregado, realiza uma verificação, caso o tamanho do vetor de skill do desempregado for maior que o de vagas (garante que o desempregado possa ter todas as skills requeridas), ele ordena o vetor de skills das vagas e desempregados, depois percorre o vetor de skill de desempregados verificando se o skill está presente no vetor das vagas, caso esteja, aumenta um contador auxiliar, caso contrario, não aumenta.
+Ao final de percorrer os vetores, verifica se o tamanho do contador é igual ao tamanho do vetor de skill da vaga, caso for, imprime o nome do desempregado e o id da vaga, depois deleta o desempregado encontrado do vetor de desempregados, para evitar que uma vaga seja atribuida a mais de um desempregado.
