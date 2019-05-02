@@ -8,7 +8,7 @@ using namespace std;
 
 int main() {
 
-  Operations* operations = Operations::getInstance(); // Classe singleton
+  Operations* operations = Operations::getInstance(); // Classe singleton, o construtor é privado, assim que ela é instaciada.
 
   int option = -1;
 

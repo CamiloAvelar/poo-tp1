@@ -1,6 +1,6 @@
 #include "../include/Util.h"
 
-
+// Metodo para deixar strings em lowercase
 const string Util::toLowerCase(const string& str) {
   string newString;
   newString.resize(str.size());
@@ -10,6 +10,7 @@ const string Util::toLowerCase(const string& str) {
   return newString;
 }
 
+// Método para 'explodir' strings em vetores de strings, recebe uma string e um char que serve de 'breakpoint' para a separação.
 const vector<string> Util::explode(const string& testString, const char& explodeChar) {
     string buff{""};
     vector<string> stringVector;
@@ -27,6 +28,7 @@ const vector<string> Util::explode(const string& testString, const char& explode
     return stringVector;
 }
 
+// Método para auxiliar o display das opções do programa.
 const int Util::waitForAction(const int key) {
   cout << "aperte enter para continuar" << endl;
   if (key == 8 || key == 4 || key == 5) {
@@ -55,6 +57,7 @@ const int Util::displayAction() {
   return getAction();
 }
 
+// Método para pegar a resposta do usuário
 const int Util::getAction() {
   int option = 0;
 
